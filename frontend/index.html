@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=¨, initial-scale=1.0">
+  <title>BookDucks</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  
+</head>
+<body>
+  <header>
+    <img id="duckImg" src="img/duck.png"/>
+    <h1>BookDucks</h1> 
+    <p>Beskrvining kort av hemsidan</p>
+    <img id="duckprintImg" src="img/duck-prints.png"/>
+  </header>
+
+  <!-- Logga in sida  -->
+  <div class="loginContiner" id="loginContiner">
+    <h2>Logga in</h2>
+    <div class="line"></div>
+    <p>"Lorem ipsum dolor sit amet"</p>
+
+    <input class="username" type="text" placeholder="Användarnamn eller e-post" id="username" required>
+    <input class="password" type="password" placeholder="Lösenord" id="password" required>
+    
+    <button id="loginBtn">Logga in </button>
+    <button id="ToRegisterContinerBtn">Inte medlem? <span class="orangeSpan">Skapa konto</span></button>
+
+    
+  </div>
+
+  <!-- Registera sida -->
+  <div class="registerContiner hidden">
+    <h2>Registera</h2>
+    <div class="line"></div>
+    <p>"Lorem ipsum dolor sit amet"</p>
+
+
+    
+    <input class="registerUsername" type="text" placeholder="Användarnamn" id="registerUsername" required>
+
+    <input class="registerPassword" type="password" placeholder="Lösenord" id="registerPassword" required>
+
+    <input class="registerEmail" type="email" placeholder="E-post" id="registerEmail" required>
+
+    <button id="registerBtn">Registera</button>
+    <button id="ToLoginContinerBtn">Redan medlem? <span class="orangeSpan">Logga in</span></button>
+  </div>
+
+  <!-- "Mina sidor" - Användare Inloggad -->
+  <div class="profileContiner hidden">
+    <h2>Mina sidor</h2>
+    <div class="line"></div>
+    <p>"Lorem ipsum dolor sit amet"</p>
+
+    <!-- Knapp Profilinfo -->
+
+    <button class="userInfoBtn"><i class="fas fa-user fa-5x" style="color:#fff;"></i></button>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <div class="modalUserText"></div>
+        </div>
+    </div>
+
+    <!-- Knapp för användarens tillagda Böcker -->
+    <button class="userBookBtn"><i class="fas fa-book-open fa-5x" style="color:#fff;"></i></button>
+    <div class="modalBook">
+      <div class="modal-Bookcontent">
+          <span class="close-Bookbutton">×</span>
+          <div class="modalUserBook"></div>
+          <div class="userBookList"></div>
+      </div>
+    </div>
+
+    <!-- Knapp för användarens tillagda ljudböcker  -->
+    <button class="userAudiobookBtn"><i class="fas fa-headphones fa-5x" style="color:#fff;"></i></button>
+    <div class="modalAudiobook">
+      <div class="modal-Audiobookcontent">
+          <span class="close-Audiobookbutton">×</span>
+          <div class="modalUserAudiobook"></div>
+          <div class="userAudiobookList"></div>
+      </div>
+    </div>
+
+    <button class="addBookAudioBtn"><i class="fas fa-plus fa-5x" style="color:#fff;"></i></button>
+    <div class="modalAdd">
+      <div class="modal-Addcontent">
+          <span class="close-Addbutton">×</span>
+          <div class="modalAddBookAudio"></div>
+      </div>
+    </div>  
+
+  </div>
+
+  <!-- Biblotek -->
+  <div class="library hidden">
+    <div class="libraryheader">
+      <h2>BookDucks Bibliotek</h2>
+      <div class="line"></div>
+      <p>"Lorem ipsum dolor sit amet"</p>
+    </div>
+
+    
+    <div class="libraryBox">
+      <h4 class="heading">Böcker <i class="fas fa-book-open" style="font-size:30px; color:#eea341"></i></h4>
+      <div id="bookList"></div>
+      <h4 class="heading">Ljudböcker <i class="fas fa-headphones" style="font-size:30px; color:#eea341"></i></h4>
+      <div id="audiobookList"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-basic">
+    <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Hem</a></li>
+        <li class="list-inline-item"><a href="#">Om oss</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+    </ul>
+    <p class="copyright">Hanna © 2022</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
